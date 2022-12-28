@@ -74,7 +74,7 @@ def find_expense_by_id(exp_id):
         for item in record_table.get_children():
             record_table.delete(item)
         
-        for i in range(len(expense_data)):
+        for i in expense_data_index:
             record_table.insert(parent='', index='end', text = '', iid = i, values = expense_data[i])
     else:
         load_expense_data()
